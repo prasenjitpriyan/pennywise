@@ -2,6 +2,11 @@ import { Schema, model, models } from "mongoose";
 
 const IncomeSchema = new Schema(
   {
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     title: {
       type: String,
       required: true,
